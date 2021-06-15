@@ -15,8 +15,33 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jqo-Ot-Iu7">
+                                <rect key="frame" x="40" y="282.5" width="334" height="170.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Usl-8w-q2o">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="uFT-M7-AKx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Github for Repositories." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPV-er-AZs">
+                                        <rect key="frame" x="0.0" y="150" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jqo-Ot-Iu7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="ILy-Yp-D1A"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jqo-Ot-Iu7" secondAttribute="trailing" constant="40" id="Ls5-BH-4ER"/>
+                            <constraint firstItem="Jqo-Ot-Iu7" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="kpL-9u-UWX"/>
+                            <constraint firstItem="Jqo-Ot-Iu7" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="sJt-PJ-Cde"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -25,6 +50,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="search-placeholder" width="272.66665649414062" height="260.66665649414062"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
