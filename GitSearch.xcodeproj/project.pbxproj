@@ -13,6 +13,7 @@
 		E3B75AFF2678580F0020F528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B75AFD2678580F0020F528 /* LaunchScreen.storyboard */; };
 		E3B75B0926786CD40020F528 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B75B0826786CD40020F528 /* SearchViewController.swift */; };
 		E3B75B0B26786D040020F528 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B75B0A26786D040020F528 /* SearchViewController.storyboard */; };
+		E3B75B0E26786DF00020F528 /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B75B0D26786DF00020F528 /* StoryboardInstantiatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E3B75B002678580F0020F528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3B75B0826786CD40020F528 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E3B75B0A26786D040020F528 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
+		E3B75B0D26786DF00020F528 /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				E3B75AF22678580E0020F528 /* AppDelegate.swift */,
 				E3B75AF42678580E0020F528 /* SceneDelegate.swift */,
 				E3B75B0C26786D170020F528 /* SearchViewController */,
+				E3B75B0F26786DF40020F528 /* Protocols */,
 				E3B75AFB2678580F0020F528 /* Assets.xcassets */,
 				E3B75AFD2678580F0020F528 /* LaunchScreen.storyboard */,
 				E3B75B002678580F0020F528 /* Info.plist */,
@@ -73,6 +76,14 @@
 				E3B75B0826786CD40020F528 /* SearchViewController.swift */,
 			);
 			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		E3B75B0F26786DF40020F528 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E3B75B0D26786DF00020F528 /* StoryboardInstantiatable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3B75B0926786CD40020F528 /* SearchViewController.swift in Sources */,
+				E3B75B0E26786DF00020F528 /* StoryboardInstantiatable.swift in Sources */,
 				E3B75AF32678580E0020F528 /* AppDelegate.swift in Sources */,
 				E3B75AF52678580E0020F528 /* SceneDelegate.swift in Sources */,
 			);
