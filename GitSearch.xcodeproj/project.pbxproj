@@ -14,6 +14,8 @@
 		E3B75B0926786CD40020F528 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B75B0826786CD40020F528 /* SearchViewController.swift */; };
 		E3B75B0B26786D040020F528 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B75B0A26786D040020F528 /* SearchViewController.storyboard */; };
 		E3B75B0E26786DF00020F528 /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B75B0D26786DF00020F528 /* StoryboardInstantiatable.swift */; };
+		E3B75B112678841A0020F528 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B75B102678841A0020F528 /* SearchResultsViewController.swift */; };
+		E3B75B13267884340020F528 /* SearchResultsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B75B12267884340020F528 /* SearchResultsViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E3B75B0826786CD40020F528 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E3B75B0A26786D040020F528 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
 		E3B75B0D26786DF00020F528 /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
+		E3B75B102678841A0020F528 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		E3B75B12267884340020F528 /* SearchResultsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResultsViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			children = (
 				E3B75AF22678580E0020F528 /* AppDelegate.swift */,
 				E3B75AF42678580E0020F528 /* SceneDelegate.swift */,
+				E3B75B142678843C0020F528 /* SearchResultsViewController */,
 				E3B75B0C26786D170020F528 /* SearchViewController */,
 				E3B75B0F26786DF40020F528 /* Protocols */,
 				E3B75AFB2678580F0020F528 /* Assets.xcassets */,
@@ -84,6 +89,15 @@
 				E3B75B0D26786DF00020F528 /* StoryboardInstantiatable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E3B75B142678843C0020F528 /* SearchResultsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E3B75B12267884340020F528 /* SearchResultsViewController.storyboard */,
+				E3B75B102678841A0020F528 /* SearchResultsViewController.swift */,
+			);
+			path = SearchResultsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3B75B13267884340020F528 /* SearchResultsViewController.storyboard in Resources */,
 				E3B75AFF2678580F0020F528 /* LaunchScreen.storyboard in Resources */,
 				E3B75AFC2678580F0020F528 /* Assets.xcassets in Resources */,
 				E3B75B0B26786D040020F528 /* SearchViewController.storyboard in Resources */,
@@ -160,6 +175,7 @@
 				E3B75B0E26786DF00020F528 /* StoryboardInstantiatable.swift in Sources */,
 				E3B75AF32678580E0020F528 /* AppDelegate.swift in Sources */,
 				E3B75AF52678580E0020F528 /* SceneDelegate.swift in Sources */,
+				E3B75B112678841A0020F528 /* SearchResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
