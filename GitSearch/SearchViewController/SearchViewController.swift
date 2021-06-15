@@ -11,6 +11,8 @@ final class SearchViewController: UIViewController, StoryboardInstantiatable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "GitSearch"
     }
 
 }

@@ -3,7 +3,7 @@
 //  GitSearch
 //
 //  Created by Jacky Lao on 6/15/21.
-//
+///Users/jackylao/Documents/Direct PL/GitSearch/GitSearch
 
 import UIKit
 
@@ -11,28 +11,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        
         guard let windowScene = scene as? UIWindowScene else { return }
         window = makeKeyWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
     }
-
-
 }
 
 extension SceneDelegate {
     private func makeKeyWindow(windowScene: UIWindowScene) -> UIWindow {
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = makeRootViewController()
+        window.rootViewController = makeNavigationController(rootViewController: makeRootViewController())
         return window
     }
     
     private func makeRootViewController() -> UIViewController {
         SearchViewController.instantiate()
+    }
+    
+    private func makeNavigationController(rootViewController: UIViewController) -> UINavigationController {
+        let navigationController = UINavigationController(rootViewController: rootViewController)
+        navigationController.navigationBar.barStyle = .default
+        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.navigationBar.isTranslucent = true
+        return navigationController
     }
 }
