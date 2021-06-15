@@ -39,7 +39,7 @@
                         <constraints>
                             <constraint firstItem="Jqo-Ot-Iu7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="ILy-Yp-D1A"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jqo-Ot-Iu7" secondAttribute="trailing" constant="40" id="Ls5-BH-4ER"/>
-                            <constraint firstItem="Jqo-Ot-Iu7" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="kpL-9u-UWX"/>
+                            <constraint firstItem="Jqo-Ot-Iu7" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="5" id="kpL-9u-UWX"/>
                             <constraint firstItem="Jqo-Ot-Iu7" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="sJt-PJ-Cde"/>
                         </constraints>
                     </view>
