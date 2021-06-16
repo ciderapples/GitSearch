@@ -16,6 +16,7 @@
 		E3B75B0E26786DF00020F528 /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B75B0D26786DF00020F528 /* StoryboardInstantiatable.swift */; };
 		E3B75B112678841A0020F528 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B75B102678841A0020F528 /* SearchResultsViewController.swift */; };
 		E3B75B13267884340020F528 /* SearchResultsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B75B12267884340020F528 /* SearchResultsViewController.storyboard */; };
+		E3C67E88267A1E7200082B64 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C67E87267A1E7200082B64 /* ResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E3B75B0D26786DF00020F528 /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
 		E3B75B102678841A0020F528 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		E3B75B12267884340020F528 /* SearchResultsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResultsViewController.storyboard; sourceTree = "<group>"; };
+		E3C67E87267A1E7200082B64 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				E3B75B12267884340020F528 /* SearchResultsViewController.storyboard */,
 				E3B75B102678841A0020F528 /* SearchResultsViewController.swift */,
+				E3C67E87267A1E7200082B64 /* ResultTableViewCell.swift */,
 			);
 			path = SearchResultsViewController;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				E3B75B0E26786DF00020F528 /* StoryboardInstantiatable.swift in Sources */,
 				E3B75AF32678580E0020F528 /* AppDelegate.swift in Sources */,
 				E3B75AF52678580E0020F528 /* SceneDelegate.swift in Sources */,
+				E3C67E88267A1E7200082B64 /* ResultTableViewCell.swift in Sources */,
 				E3B75B112678841A0020F528 /* SearchResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
