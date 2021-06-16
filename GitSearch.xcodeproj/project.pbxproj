@@ -20,6 +20,8 @@
 		E3C67E8A267A21D300082B64 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C67E89267A21D300082B64 /* Repository.swift */; };
 		E3C67E8D267A245200082B64 /* GetRepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C67E8C267A245200082B64 /* GetRepositoriesResponse.swift */; };
 		E3C67E8F267A256900082B64 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C67E8E267A256900082B64 /* DataFetcher.swift */; };
+		E3C67E93267A297400082B64 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C67E92267A297400082B64 /* NetworkRequest.swift */; };
+		E3C67E95267A2B9700082B64 /* RemoteResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C67E94267A2B9700082B64 /* RemoteResourceLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		E3C67E89267A21D300082B64 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		E3C67E8C267A245200082B64 /* GetRepositoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepositoriesResponse.swift; sourceTree = "<group>"; };
 		E3C67E8E267A256900082B64 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
+		E3C67E92267A297400082B64 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		E3C67E94267A2B9700082B64 /* RemoteResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteResourceLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				E3C67E8E267A256900082B64 /* DataFetcher.swift */,
+				E3C67E92267A297400082B64 /* NetworkRequest.swift */,
+				E3C67E94267A2B9700082B64 /* RemoteResourceLoader.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -211,8 +217,10 @@
 				E3B75B0926786CD40020F528 /* SearchViewController.swift in Sources */,
 				E3B75B0E26786DF00020F528 /* StoryboardInstantiatable.swift in Sources */,
 				E3B75AF32678580E0020F528 /* AppDelegate.swift in Sources */,
+				E3C67E93267A297400082B64 /* NetworkRequest.swift in Sources */,
 				E3B75AF52678580E0020F528 /* SceneDelegate.swift in Sources */,
 				E3C67E88267A1E7200082B64 /* ResultTableViewCell.swift in Sources */,
+				E3C67E95267A2B9700082B64 /* RemoteResourceLoader.swift in Sources */,
 				E3C67E8F267A256900082B64 /* DataFetcher.swift in Sources */,
 				E3B75B112678841A0020F528 /* SearchResultsViewController.swift in Sources */,
 				E3C67E8D267A245200082B64 /* GetRepositoriesResponse.swift in Sources */,
