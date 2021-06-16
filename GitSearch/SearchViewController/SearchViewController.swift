@@ -28,6 +28,17 @@ final class SearchViewController: UIViewController, StoryboardInstantiatable {
         searchController.searchBar.text = term
         searchController.isActive = true
         searchController.searchBar.resignFirstResponder()
+        
+        let repositoryRequest: RepositoriesRequest = .getRepositories(query: term)
+        
+        RemoteResourceLoader().load(networkRequest: repositoryRequest, resourceType: GetRepositoriesResponse.self) { result in
+            switch result {
+            case .success(let response):
+                self.searchResultsViewController.updateResults(response.items)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 

@@ -48,4 +48,3 @@ class RemoteResourceLoader<T: NetworkRequest>: NetworkServiceProvider {
         }
     }
 }
-
