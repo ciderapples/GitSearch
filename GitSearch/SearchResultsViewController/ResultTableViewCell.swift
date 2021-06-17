@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class ResultTableViewCell: UITableViewCell {
     
@@ -21,6 +22,9 @@ final class ResultTableViewCell: UITableViewCell {
     var repository: Repository? {
         didSet {
             if let repository = repository {
+                let url = URL(string: repository.owner.avatarUrl)
+                avatarImageView.kf.setImage(with: url)
+                
                 nameLabel.text = repository.owner.login
                 titleLabel.text = repository.name
                 if let description = repository.description {

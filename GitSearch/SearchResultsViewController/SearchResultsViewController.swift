@@ -34,7 +34,7 @@ final class SearchResultsViewController: UIViewController, StoryboardInstantiata
     
     func quickSearch(_ searchText: String) {
         searchingView.isHidden = true
-        self.tableView.isHidden = false
+        tableView.isHidden = false
         tableView.showActivityIndicator()
         let repositoryRequest: RepositoriesRequest = .getRepositories(query: searchText, page: "1", perPage: "3")
         RemoteResourceLoader().load(networkRequest: repositoryRequest, resourceType: GetRepositoriesResponse.self) { result in

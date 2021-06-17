@@ -35,12 +35,12 @@ final class RepositoryListViewController: UIViewController, StoryboardInstantiat
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.showActivityIndicator()
-
         fetchRepositories(with: "\(nextPage)") // Show first page
     }
     
     private func fetchRepositories(with page: String) {
+        tableView.showActivityIndicator()
+        tableView.isHidden = false
         let repositoryRequest: RepositoriesRequest = .getRepositories(query: searchText, page: page, perPage: perPage)
         RemoteResourceLoader().load(networkRequest: repositoryRequest, resourceType: GetRepositoriesResponse.self) { [self] result in
             switch result {
@@ -50,13 +50,13 @@ final class RepositoryListViewController: UIViewController, StoryboardInstantiat
                 self.results.append(contentsOf: response.items)
                 if results.count > 0 {
                     tableView.isHidden = false
+                    tableView.reloadData()
                 } else {
                     tableView.isHidden = true
                 }
             case .failure(let error):
                 print(error)
             }
-            
             tableView.hideActivityIndicator()
         }
     }
