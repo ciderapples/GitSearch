@@ -18,4 +18,3 @@ struct Owner: Codable {
         case avatarUrl = "avatar_url"
     }
 }
-
