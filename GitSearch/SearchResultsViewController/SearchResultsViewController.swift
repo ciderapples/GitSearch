@@ -84,6 +84,10 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if indexPath.row < 3 {
+            // Show webview
+        } else {
+            // Show repository 
+        }
     }
 }
