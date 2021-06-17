@@ -71,7 +71,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qeqweqweqwe qweqiwue qwieuqiw qeioqowe iquweioqu qiweoqwe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPe-cN-ExT">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPe-cN-ExT">
                                                             <rect key="frame" x="0.0" y="71" width="374" height="27"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <nil key="textColor"/>
@@ -140,7 +140,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="titleLabel" destination="Blj-P0-EWJ" id="TDH-F8-TLl"/>
+                                            <outlet property="avatarImageView" destination="R1h-xN-HgZ" id="73j-lb-NFp"/>
+                                            <outlet property="detailLabel" destination="RPe-cN-ExT" id="6Zy-id-Ych"/>
+                                            <outlet property="languageLabel" destination="X5b-vR-5u1" id="XvR-fs-4JY"/>
+                                            <outlet property="languageView" destination="LXv-g0-LwN" id="hEW-gP-3QB"/>
+                                            <outlet property="nameLabel" destination="an5-m2-S5c" id="L2C-sG-P7s"/>
+                                            <outlet property="starCountLabel" destination="VKK-vE-QDm" id="U14-Mg-bvK"/>
+                                            <outlet property="titleLabel" destination="Blj-P0-EWJ" id="L7u-2T-bzN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

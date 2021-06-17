@@ -51,8 +51,7 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ResultTableViewCell.identifier, for: indexPath) as! ResultTableViewCell
-        let result = results[indexPath.row]
-        cell.titleLabel.text = result.fullName
+        cell.repository = results[indexPath.row]
         return cell
     }
     
