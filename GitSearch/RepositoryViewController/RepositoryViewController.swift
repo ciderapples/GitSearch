@@ -13,9 +13,11 @@ final class RepositoryViewController: UIViewController, StoryboardInstantiatable
     @IBOutlet weak var webView: WKWebView!
     
     private var urlString: String
-    
-    required init?(coder: NSCoder, urlString: String) {
+    private var titleText: String
+
+    required init?(coder: NSCoder, urlString: String, titleText: String) {
         self.urlString = urlString
+        self.titleText = titleText
         super.init(coder: coder)
     }
     
@@ -26,7 +28,11 @@ final class RepositoryViewController: UIViewController, StoryboardInstantiatable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = titleText
         
+        navigationController?.navigationBar.prefersLargeTitles = false
+
         guard let link = URL(string: urlString) else { return }
         let request = URLRequest(url: link)
         webView.load(request)

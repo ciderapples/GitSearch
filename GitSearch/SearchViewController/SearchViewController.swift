@@ -26,6 +26,11 @@ final class SearchViewController: UIViewController, StoryboardInstantiatable {
         definesPresentationContext = true
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     private func search(term: String) {
         searchController.searchBar.text = term
         searchController.isActive = true

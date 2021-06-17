@@ -24,6 +24,8 @@ final class RepositoryListViewController: UIViewController, StoryboardInstantiat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "Repositories"
+        
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
 }

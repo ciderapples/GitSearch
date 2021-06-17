@@ -98,7 +98,7 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
             // Show webview detail
             let repository = results[indexPath.row]
             let vc = RepositoryViewController.instantiate {
-                RepositoryViewController(coder: $0, urlString: repository.htmlUrl)
+                RepositoryViewController(coder: $0, urlString: repository.htmlUrl, titleText: repository.name)
             }
             
             if let parent = parent as? UISearchController {
