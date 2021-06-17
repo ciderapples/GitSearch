@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ResultTableViewCell: UITableViewCell {
+final class ResultTableViewCell: UITableViewCell {
     
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!

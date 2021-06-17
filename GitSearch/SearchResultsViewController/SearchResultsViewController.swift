@@ -7,13 +7,14 @@
 
 import UIKit
 
-class SearchResultsViewController: UIViewController, StoryboardInstantiatable {
+final class SearchResultsViewController: UIViewController, StoryboardInstantiatable {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchingView: UIView!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchingLabel: UILabel!
     private var results: [Repository] = []
+    private var searchText: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class SearchResultsViewController: UIViewController, StoryboardInstantiatable {
     func updateSearchText(_ text: String) {
         searchingView.isHidden = false
         searchingLabel.text = "🔎 Search Repositories with \"\(text)\""
+        searchText = text
     }
     
     func updateResults(_ results: [Repository]) {
@@ -40,7 +42,11 @@ class SearchResultsViewController: UIViewController, StoryboardInstantiatable {
     }
     
     @IBAction func search(_ sender: Any) {
-        
+        guard let text = searchText else { return }
+        let vc = RepositoryListViewController.instantiate {
+            RepositoryListViewController(coder: $0, searchText: text)
+        }
+        present(vc, animated: true, completion: nil)
     }
 }
 
