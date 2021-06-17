@@ -149,15 +149,15 @@
                                             <outlet property="titleLabel" destination="Blj-P0-EWJ" id="L7u-2T-bzN"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SeeMoreTableCell" textLabel="KWI-Xy-3Ks" rowHeight="57" style="IBUITableViewCellStyleDefault" id="6Au-k3-bKf">
-                                        <rect key="frame" x="0.0" y="207.5" width="414" height="57"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SeeMoreTableCell" textLabel="KWI-Xy-3Ks" rowHeight="64" style="IBUITableViewCellStyleDefault" id="6Au-k3-bKf">
+                                        <rect key="frame" x="0.0" y="207.5" width="414" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Au-k3-bKf" id="BzV-aW-lGd">
-                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="57"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KWI-Xy-3Ks">
-                                                    <rect key="frame" x="20" y="0.0" width="356.5" height="57"/>
+                                                    <rect key="frame" x="20" y="0.0" width="356.5" height="64"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>

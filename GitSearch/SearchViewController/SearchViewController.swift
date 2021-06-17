@@ -9,8 +9,9 @@ import UIKit
 
 final class SearchViewController: UIViewController, StoryboardInstantiatable {
 
-    let searchResultsViewController = SearchResultsViewController.instantiate()
-    var searchController = UISearchController()
+    private let searchResultsViewController = SearchResultsViewController.instantiate()
+    private var searchController = UISearchController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +21,7 @@ final class SearchViewController: UIViewController, StoryboardInstantiatable {
         searchController.searchBar.placeholder = "Search"
         searchController.searchBar.delegate = self
         searchController.searchResultsUpdater = self
+        searchController.hidesNavigationBarDuringPresentation = true
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
@@ -44,7 +46,6 @@ final class SearchViewController: UIViewController, StoryboardInstantiatable {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchResultsViewController.updateSearchText(searchText)
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -56,6 +57,7 @@ extension SearchViewController: UISearchBarDelegate {
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text, !text.isEmpty else { return }
+        searchResultsViewController.updateSearchText(text)
     }
 }
 

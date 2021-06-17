@@ -45,12 +45,22 @@ final class SearchResultsViewController: UIViewController, StoryboardInstantiata
     }
     
     @IBAction func search(_ sender: Any) {
+        showAllRepositories()
+    }
+    
+    private func showAllRepositories() {
         guard let text = searchText else { return }
         let vc = RepositoryListViewController.instantiate {
             RepositoryListViewController(coder: $0, searchText: text)
         }
-        present(vc, animated: true, completion: nil)
+        
+        if let parent = parent as? UISearchController {
+            if let searchVC = parent.searchResultsUpdater as? SearchViewController {
+                searchVC.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
+    
 }
 
 extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -85,9 +95,19 @@ extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row < 3 {
-            // Show webview
+            // Show webview detail
+            let repository = results[indexPath.row]
+            let vc = RepositoryViewController.instantiate {
+                RepositoryViewController(coder: $0, urlString: repository.htmlUrl)
+            }
+            
+            if let parent = parent as? UISearchController {
+                if let searchVC = parent.searchResultsUpdater as? SearchViewController {
+                    searchVC.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
         } else {
-            // Show repository 
+            showAllRepositories()
         }
     }
 }

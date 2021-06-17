@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7PW-KL-SLc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -28,7 +28,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7PW-KL-SLc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="4kS-DL-rEY"/>
+                            <constraint firstItem="7PW-KL-SLc" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="4kS-DL-rEY"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7PW-KL-SLc" secondAttribute="trailing" id="Gu1-qw-Ufw"/>
                             <constraint firstItem="7PW-KL-SLc" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="iOb-0M-8CR"/>
                             <constraint firstItem="7PW-KL-SLc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="o8h-m8-PC3"/>
