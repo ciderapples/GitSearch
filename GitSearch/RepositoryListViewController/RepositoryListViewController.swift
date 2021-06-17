@@ -76,4 +76,13 @@ extension RepositoryListViewController: UITableViewDelegate, UITableViewDataSour
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Show webview detail
+        let repository = results[indexPath.row]
+        let vc = RepositoryViewController.instantiate {
+            RepositoryViewController(coder: $0, urlString: repository.htmlUrl, titleText: repository.name)
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
