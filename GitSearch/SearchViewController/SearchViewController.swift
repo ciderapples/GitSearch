@@ -44,7 +44,7 @@ final class SearchViewController: UIViewController, StoryboardInstantiatable {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        searchResultsViewController.updateSearchText(searchText)
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
