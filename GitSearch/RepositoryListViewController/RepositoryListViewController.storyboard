@@ -16,9 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results Found." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIy-v2-Kdq">
+                                <rect key="frame" x="124" y="429" width="166.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fdc-95-1af">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="WqO-Ny-VHL">
+                                    <rect key="frame" x="0.0" y="207.00000034679067" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResultTableViewCell" rowHeight="158" id="qfn-ZG-Yrd" customClass="ResultTableViewCell" customModule="GitSearch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="158"/>
@@ -150,8 +160,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Fdc-95-1af" secondAttribute="trailing" id="4Tq-f5-alG"/>
+                            <constraint firstItem="yIy-v2-Kdq" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="G69-oU-P7Z"/>
                             <constraint firstItem="Fdc-95-1af" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GEp-gQ-BOt"/>
                             <constraint firstAttribute="bottom" secondItem="Fdc-95-1af" secondAttribute="bottom" id="IeP-zg-kp3"/>
+                            <constraint firstItem="yIy-v2-Kdq" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="XfM-xa-qtn"/>
                             <constraint firstItem="Fdc-95-1af" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="d8Y-Vt-Dic"/>
                         </constraints>
                     </view>

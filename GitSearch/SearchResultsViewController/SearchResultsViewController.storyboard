@@ -22,12 +22,16 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Ask-sk-idT">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ask-sk-idT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="M6c-Ug-dsM">
+                                    <rect key="frame" x="0.0" y="271.00000034679067" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResultTableViewCell" rowHeight="158" id="gQK-6m-Vc8" customClass="ResultTableViewCell" customModule="GitSearch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="49.5" width="414" height="158"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="158"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gQK-6m-Vc8" id="qcY-sS-leu">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="158"/>
@@ -150,7 +154,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SeeMoreTableCell" textLabel="KWI-Xy-3Ks" rowHeight="64" style="IBUITableViewCellStyleDefault" id="6Au-k3-bKf">
-                                        <rect key="frame" x="0.0" y="207.5" width="414" height="64"/>
+                                        <rect key="frame" x="0.0" y="182.5" width="414" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Au-k3-bKf" id="BzV-aW-lGd">
                                             <rect key="frame" x="0.0" y="0.0" width="384.5" height="64"/>
@@ -159,7 +163,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KWI-Xy-3Ks">
                                                     <rect key="frame" x="20" y="0.0" width="356.5" height="64"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -211,7 +215,7 @@
                             <constraint firstAttribute="bottom" secondItem="Ask-sk-idT" secondAttribute="bottom" id="Vuk-vr-Ve8"/>
                             <constraint firstItem="kLb-rX-92M" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XbH-to-emM"/>
                             <constraint firstItem="Ask-sk-idT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dss-I2-sVE"/>
-                            <constraint firstItem="Ask-sk-idT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fVX-qV-D9w"/>
+                            <constraint firstItem="Ask-sk-idT" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="fVX-qV-D9w"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="kLb-rX-92M" secondAttribute="bottom" id="tFk-hd-N6S"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kLb-rX-92M" secondAttribute="trailing" id="wds-rk-q9C"/>
                             <constraint firstItem="HfZ-zN-mZF" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="xzN-tw-3fO"/>

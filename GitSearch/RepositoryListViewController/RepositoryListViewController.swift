@@ -33,9 +33,10 @@ final class RepositoryListViewController: UIViewController, StoryboardInstantiat
         
         navigationController?.navigationBar.prefersLargeTitles = false
         
-        tableView.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.showActivityIndicator()
+
         fetchRepositories(with: "\(nextPage)") // Show first page
     }
     
@@ -49,11 +50,14 @@ final class RepositoryListViewController: UIViewController, StoryboardInstantiat
                 self.results.append(contentsOf: response.items)
                 if results.count > 0 {
                     tableView.isHidden = false
+                } else {
+                    tableView.isHidden = true
                 }
-                tableView.reloadData()
             case .failure(let error):
                 print(error)
             }
+            
+            tableView.hideActivityIndicator()
         }
     }
 }

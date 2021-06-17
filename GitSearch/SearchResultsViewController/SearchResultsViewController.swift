@@ -32,15 +32,27 @@ final class SearchResultsViewController: UIViewController, StoryboardInstantiata
         searchText = text
     }
     
-    func updateResults(_ results: [Repository], count: Int) {
+    func quickSearch(_ searchText: String) {
         searchingView.isHidden = true
-        if results.count > 0 {
-            self.results = results
-            totalRepoCount = count
-            tableView.reloadData()
-            tableView.isHidden = false
-        } else {
-            tableView.isHidden = true
+        self.tableView.isHidden = false
+        tableView.showActivityIndicator()
+        let repositoryRequest: RepositoriesRequest = .getRepositories(query: searchText, page: "1", perPage: "3")
+        RemoteResourceLoader().load(networkRequest: repositoryRequest, resourceType: GetRepositoriesResponse.self) { result in
+            switch result {
+            case .success(let response):
+                self.results = response.items
+                if self.results.count > 0 {
+                    self.totalRepoCount = response.totalCount
+                    self.tableView.reloadData()
+                    self.tableView.isHidden = false
+                } else {
+                    self.tableView.isHidden = true
+                }
+            case .failure(let error):
+                print(error)
+            }
+            
+            self.tableView.hideActivityIndicator()
         }
     }
     
@@ -60,18 +72,9 @@ final class SearchResultsViewController: UIViewController, StoryboardInstantiata
             }
         }
     }
-    
 }
 
 extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "Repositories"
-        } else {
-            return ""
-        }
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if totalRepoCount > 3 {

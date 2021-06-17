@@ -31,30 +31,19 @@ final class SearchViewController: UIViewController, StoryboardInstantiatable {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    private func search(term: String) {
-        searchController.searchBar.text = term
+    private func search(text: String) {
+        searchController.searchBar.text = text
         searchController.isActive = true
         searchController.searchBar.resignFirstResponder()
         
-        let repositoryRequest: RepositoriesRequest = .getRepositories(query: term, page: "1", perPage: "3")
-        RemoteResourceLoader().load(networkRequest: repositoryRequest, resourceType: GetRepositoriesResponse.self) { result in
-            switch result {
-            case .success(let response):
-                self.searchResultsViewController.updateResults(response.items, count: response.totalCount)
-            case .failure(let error):
-                print(error)
-            }
-        }
+        searchResultsViewController.quickSearch(text)
     }
 }
 
 extension SearchViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    }
-
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text else { return }
-        search(term: text)
+        search(text: text)
     }
 }
 
