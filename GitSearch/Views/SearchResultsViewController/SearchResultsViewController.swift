@@ -43,11 +43,11 @@ final class SearchResultsViewController: UIViewController, StoryboardInstantiata
                 self.results = response.items
                 if self.results.count > 0 {
                     self.totalRepoCount = response.totalCount
-                    self.tableView.reloadData()
                     self.tableView.isHidden = false
                 } else {
                     self.tableView.isHidden = true
                 }
+                self.tableView.reloadData()
             case .failure(let error):
                 print(error)
             }

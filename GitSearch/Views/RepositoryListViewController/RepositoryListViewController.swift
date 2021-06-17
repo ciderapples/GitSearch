@@ -55,10 +55,11 @@ final class RepositoryListViewController: UIViewController, StoryboardInstantiat
                 self.results.append(contentsOf: response.items)
                 if results.count > 0 {
                     tableView.isHidden = false
-                    tableView.reloadData()
                 } else {
                     tableView.isHidden = true
                 }
+                
+                tableView.reloadData()
             case .failure(let error):
                 print(error)
             }
@@ -81,8 +82,16 @@ extension RepositoryListViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == results.count - 1  { // Last cell, load more content
             if results.count < totalCount {
+                let spinner = UIActivityIndicatorView(style: .medium)
+                spinner.frame = CGRect(x: 0.0, y: 0.0, width: tableView.bounds.width, height: 70)
+                spinner.startAnimating()
+                tableView.tableFooterView = spinner
                 fetchRepositories(with: "\(nextPage)")
+            } else {
+                
+                tableView.tableFooterView = nil
             }
+            
         }
     }
     
