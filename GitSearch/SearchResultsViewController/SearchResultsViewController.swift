@@ -15,6 +15,8 @@ final class SearchResultsViewController: UIViewController, StoryboardInstantiata
     @IBOutlet weak var searchingLabel: UILabel!
     private var results: [Repository] = []
     private var searchText: String?
+    private var totalRepoCount: Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +32,11 @@ final class SearchResultsViewController: UIViewController, StoryboardInstantiata
         searchText = text
     }
     
-    func updateResults(_ results: [Repository]) {
+    func updateResults(_ results: [Repository], count: Int) {
         searchingView.isHidden = true
         if results.count > 0 {
             self.results = results
+            totalRepoCount = count
             tableView.reloadData()
             tableView.isHidden = false
         } else {
@@ -51,14 +54,36 @@ final class SearchResultsViewController: UIViewController, StoryboardInstantiata
 }
 
 extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Repositories"
+        } else {
+            return ""
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        results.count
+        if totalRepoCount > 3 {
+            return results.count + 1 // Add +1 row for the "See More" cell
+        } else {
+            return results.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ResultTableViewCell.identifier, for: indexPath) as! ResultTableViewCell
-        cell.repository = results[indexPath.row]
-        return cell
+        if indexPath.row < 3 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ResultTableViewCell.identifier, for: indexPath) as! ResultTableViewCell
+            cell.repository = results[indexPath.row]
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SeeMoreTableCell", for: indexPath)
+            cell.textLabel?.text = "See \(totalRepoCount) more repositories"
+            return cell
+        }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }

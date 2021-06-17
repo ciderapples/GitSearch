@@ -23,19 +23,20 @@ final class ResultTableViewCell: UITableViewCell {
             if let repository = repository {
                 nameLabel.text = repository.owner.login
                 titleLabel.text = repository.name
-                detailLabel.text = repository.description ?? "jjj"
+                if let description = repository.description {
+                    detailLabel.isHidden = false
+                    detailLabel.text = description
+                } else {
+                    detailLabel.isHidden = true
+                }
                 starCountLabel.text = "\(repository.watchers)"
-                languageView.isHidden = true
-                guard let language = repository.language else { return }
-                languageView.isHidden = false
-                languageLabel.text = language
+                if let language = repository.language {
+                    languageView.isHidden = false
+                    languageLabel.text = language
+                } else {
+                    languageView.isHidden = true
+                }
             }
         }
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        
     }
 }

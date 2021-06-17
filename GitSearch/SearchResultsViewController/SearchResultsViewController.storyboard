@@ -22,12 +22,12 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ask-sk-idT">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Ask-sk-idT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultTableViewCell" rowHeight="158" id="gQK-6m-Vc8" customClass="ResultTableViewCell" customModule="GitSearch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="158"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResultTableViewCell" rowHeight="158" id="gQK-6m-Vc8" customClass="ResultTableViewCell" customModule="GitSearch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49.5" width="414" height="158"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gQK-6m-Vc8" id="qcY-sS-leu">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="158"/>
@@ -149,6 +149,23 @@
                                             <outlet property="titleLabel" destination="Blj-P0-EWJ" id="L7u-2T-bzN"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SeeMoreTableCell" textLabel="KWI-Xy-3Ks" rowHeight="57" style="IBUITableViewCellStyleDefault" id="6Au-k3-bKf">
+                                        <rect key="frame" x="0.0" y="207.5" width="414" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Au-k3-bKf" id="BzV-aW-lGd">
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="57"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KWI-Xy-3Ks">
+                                                    <rect key="frame" x="20" y="0.0" width="356.5" height="57"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLb-rX-92M">
@@ -191,7 +208,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ask-sk-idT" secondAttribute="trailing" id="0uU-7y-vwa"/>
                             <constraint firstItem="kLb-rX-92M" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="7nt-w9-i0f"/>
                             <constraint firstItem="HfZ-zN-mZF" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="8zz-WU-wsC"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ask-sk-idT" secondAttribute="bottom" id="Vuk-vr-Ve8"/>
+                            <constraint firstAttribute="bottom" secondItem="Ask-sk-idT" secondAttribute="bottom" id="Vuk-vr-Ve8"/>
                             <constraint firstItem="kLb-rX-92M" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XbH-to-emM"/>
                             <constraint firstItem="Ask-sk-idT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dss-I2-sVE"/>
                             <constraint firstItem="Ask-sk-idT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fVX-qV-D9w"/>

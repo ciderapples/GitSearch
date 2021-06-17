@@ -8,7 +8,7 @@
 import Foundation
 
 enum RepositoriesRequest {
-    case getRepositories(query: String)
+    case getRepositories(query: String, page: String, perPage: String)
 }
 
 extension RepositoriesRequest: NetworkRequest {
@@ -36,8 +36,12 @@ extension RepositoriesRequest: NetworkRequest {
     
     var params: [String : String] {
         switch self {
-        case .getRepositories(let query):
-            return ["q": query]
+        case .getRepositories(let query, let page, let perPage):
+            return [
+                "q": query,
+                "page": page,
+                "per_page": perPage
+            ]
         }
     }
 }
