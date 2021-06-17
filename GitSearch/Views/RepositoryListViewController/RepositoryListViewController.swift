@@ -58,7 +58,6 @@ final class RepositoryListViewController: UIViewController, StoryboardInstantiat
                 } else {
                     tableView.isHidden = true
                 }
-                
                 tableView.reloadData()
             case .failure(let error):
                 print(error)
@@ -88,10 +87,8 @@ extension RepositoryListViewController: UITableViewDelegate, UITableViewDataSour
                 tableView.tableFooterView = spinner
                 fetchRepositories(with: "\(nextPage)")
             } else {
-                
-                tableView.tableFooterView = nil
+                tableView.tableFooterView = UIView()
             }
-            
         }
     }
     
