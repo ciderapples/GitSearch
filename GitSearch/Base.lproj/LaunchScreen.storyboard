@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="U8d-fg-BHQ">
-                                <rect key="frame" x="132" y="303" width="150" height="150"/>
+                                <rect key="frame" x="132" y="378" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Ytm-Zd-yUN"/>
                                     <constraint firstAttribute="width" constant="150" id="g6V-bK-dvj"/>
@@ -27,7 +27,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="U8d-fg-BHQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DDJ-0R-gF8"/>
-                            <constraint firstItem="U8d-fg-BHQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="P7E-V0-hBd"/>
+                            <constraint firstItem="U8d-fg-BHQ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="P7E-V0-hBd"/>
                         </constraints>
                     </view>
                 </viewController>

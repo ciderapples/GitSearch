@@ -10,6 +10,7 @@ import UIKit
 final class RepositoryListViewController: UIViewController, StoryboardInstantiatable {
 
     @IBOutlet weak var tableView: UITableView!
+   
     private var searchText: String
     private var results: [Repository] = []
     private var totalCount = 0
@@ -35,6 +36,10 @@ final class RepositoryListViewController: UIViewController, StoryboardInstantiat
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 88
+        
         fetchRepositories(with: "\(nextPage)") // Show first page
     }
     
@@ -87,6 +92,6 @@ extension RepositoryListViewController: UITableViewDelegate, UITableViewDataSour
         let vc = RepositoryViewController.instantiate {
             RepositoryViewController(coder: $0, urlString: repository.htmlUrl, titleText: repository.name)
         }
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
